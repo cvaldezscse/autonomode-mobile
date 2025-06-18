@@ -1,0 +1,24 @@
+{
+  "TEST_ID": {
+    "test_name": "TEST_NAME",
+    "test_description": "description",
+    "jama_url": "test case link",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Step 1: ACTION1</p>",
+        "expected": "<p> Step 1: EXPECTED1</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Step 2: Enter the Email and click on Continue.</p>",
+        "expected": "<p> Step 2: Second Login screen is displayed with 'Trouble Logging in?' link.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Step 3: Select the 'Trouble Logging in?' link.</p>",
+        "expected": "<p> Step 3: Login Help screen is displayed with option to enter email of the user.</p>"
+      }
+    ]
+  }
+}
