@@ -1,46 +1,31 @@
-# autonomode-api
+# autonomode-mobile
 
-Mobile Apps Test Automation framework made for general purposes 
+Automated mobile testing framework using **Java**, **Appium** and **TestNG**.
+
+## Table of Contents
+- [Description](#description)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running Tests](#running-tests)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Description
+`autonomode-mobile` is a lightweight, extensible framework for automating mobile application testing on Android and iOS.
 
-This is a generic test automation framework for testing Mobile Apps (UI Testing) that include Hybrid and native apps.
+## Prerequisites
+- Java 11 or higher
+- Maven 3.6+ (or Gradle)
+- Node.js & npm
+- Appium Server (`npm install -g appium`)
+- Android SDK (for Android)
+- Xcode (for iOS, macOS only)
+- Connected device or emulator
 
-## Getting Started
-
-### Where has this project been made?
-
-* MacOS Monterey 12.3.1
-* IntelliJ IDEA 2022.1 (Community Edition)
-* Java v1.8.0_321
-* Maven v3.8.1
-* Appium v1.21.0
-* XCode 13
-* Android Studio Bumblebee 2021.1
-
-### Executing program
-
-* Modify the `configuration.json` file according to your needs
-* Type the command:
-    ```
-    $ mvn clean -U test
-    ```
-
-## Help
-
-If any problem is found please file an issue in this repo
-
-[Create new issue](https://github.com/cvaldezscse/autonomode-mobile/issues/new)
-
-## Authors
-* [@cvaldezscse](https://twitter.com/cvaldezscse)
-
-## Version History
-
-* 1.0-BETA
-    * Beta project in development phase
-    * Project creation and base files structure
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+## Installation
+```bash
+git clone https://github.com/your-username/autonomode-mobile.git
+cd autonomode-mobile
+mvn clean install

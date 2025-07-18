@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ZioSuite Mobile Test Suite" verbose="10" parallel="none">
+    <listeners>
+        <listener class-name="com.ziosuite.mobile.reporting.listeners.ReportingClassListener"/>
+        <listener class-name="com.ziosuite.mobile.reporting.listeners.LoggerInitializerListener"/>
+    </listeners>
+    <test name="Whole Test Suite">
+        <classes>
+
+
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->

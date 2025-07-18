@@ -1,4 +1,4 @@
-package dev.cvaldezscse;
+package com.cvaldezscse.autonomode;
 
 /**
  * Hello world!

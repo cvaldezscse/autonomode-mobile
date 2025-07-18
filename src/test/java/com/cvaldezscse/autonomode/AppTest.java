@@ -1,4 +1,4 @@
-package dev.cvaldezscse;
+package com.cvaldezscse.autonomode;
 
 import static org.junit.Assert.assertTrue;
 

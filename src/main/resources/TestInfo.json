@@ -1,0 +1,861 @@
+{
+  "GID-257350": {
+    "test_name": "Session Management: CTA to address Login Help screen",
+    "test_description": "Verification of option for user to navigate to login help screen in the Login screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017873?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Step 1: Open the ZioSuite Mobile App.</p>",
+        "expected": "<p> Step 1: First Login screen is displayed with Field to enter the email.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Step 2: Enter the Email and click on Continue.</p>",
+        "expected": "<p> Step 2: Second Login screen is displayed with 'Trouble Logging in?' link.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Step 3: Select the 'Trouble Logging in?' link.</p>",
+        "expected": "<p> Step 3: Login Help screen is displayed with option to enter email of the user.</p>"
+      }
+    ]
+  },
+  "GID-257326": {
+    "test_name": "Session Management: Username/email address format verification ",
+    "test_description": "Username field validation in Login screen",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017849?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p>Open Zio Suite mobile app and enter username with any of the invalid format below and click on continue button\n\n \n\n A@b@c@example.com\na\"b(c)d,e:f;gi[j\\kl@example.com\njust\"not\"right@example.com\nthis is\"not\\allowed@example.com • this\\ still\\\"not\\\\allowed@example.com\n234567890123456789012345678901234567890123456789012345678901234+x@example.com\n john..doe@example.com\njohn.doe@example..com</p>",
+        "expected": "<p>Appropriate error message is displayed.</p>"
+      }
+    ]
+  },
+  "GID-257324": {
+    "test_name": "Session Management: Username and password credentials :Successful User and Password Login",
+    "test_description": "Verification of Username and Password fields in Login screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017847?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Launch the ZioSuite mobile app a enter valid username/email address in the Username field.</p>",
+        "expected": "<p> Expected 1: The username entered is displayed to the user.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Click on the continue button</p>",
+        "expected": "<p> Expected 2: User is navigated to the login screen to enter the password with username displayed</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter valid password in the Password field.</p>",
+        "expected": "<p> Expected 3: The password entered is masked and not displayed to the user.</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Select the Login button.</p>",
+        "expected": "<p> Expected 4: The user is authenticated sucessfully and logged into the ZioSuite mobile app.</p>"
+      }
+    ]
+  },
+  "GID-257344": {
+    "test_name": "Session Management: User roles that have login permissions:User Role Permissions",
+    "test_description": "Verification of ZioSuite app access for different user roles.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017867?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Enter username of clinical care user and click on continue.</p>",
+        "expected": "<p> Expected 1: User is displayed with username pre populated and field to enter password.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Enter password the above  user with clinical care role, select the login button.</p>",
+        "expected": "<p> Expected 2: User is able to login to the app successfully.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter username of prescriber user and click on continue.</p>",
+        "expected": "<p> Expected 3: User is displayed with username pre populated and field to enter password.</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Enter password of above user with prescriber role, select the login button.</p>",
+        "expected": "<p> Expected 4: User is able to login to the app successfully.</p>"
+      },
+      {
+        "name": 5,
+        "action": "<p> Action 5: Enter username of interpreter user and click on continue.</p>",
+        "expected": "<p> Expected 5: sUser is displayed with username pre populated and field to enter password.</p>"
+      },
+      {
+        "name": 6,
+        "action": "<p> Action 6: Enter  password of above user with Interpreter role, select the login button.</p>",
+        "expected": "<p> Expected 6: User is able to login to the app successfully.</p>"
+      }
+    ]
+  },
+  "GID-257475": {
+    "test_name": "Settings: App version",
+    "test_description": "Verification of app version in Settings screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017998?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app as a valid existing clinical care user.\n\nTap to settings bottom tab.</p>",
+        "expected": "<p> Expected 1: Settings bottom screen is displayed with the App version at the bottom of the screen.</p>"
+      }
+    ]
+  },
+  "GID-257472": {
+    "test_name": "Settings: Change PIN screen behavior",
+    "test_description": "Verification plan of Change a PIN functionality.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017995?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the settings screen and select the change PIN option and enter a valid new pin on \"Enter your new PIN\" Screen.</p>",
+        "expected": "<p> Expected 1: The user is directed to \"Confirm your new PIN\" screen.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Type different PIN in Confirm PIN screen.</p>",
+        "expected": "<p> Expected 2: The user is prompted to re-enter the PIN again.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter the same valid PIN from step 2 in the confirm PIN screens.</p>",
+        "expected": "<p> Expected 3: The user is directed to Settings Screen upon successful matching.</p>"
+      }
+    ]
+  },
+  "GID-257467": {
+    "test_name": "Settings: Logout behavior CTA",
+    "test_description": "Verification of the logout option in the Settings screen.\n\nWithin the settings screen, the ZioMD mobile app shall provide a CTA to logout a user. When tapped, the user's login token will be destroyed, and password cached data associated with that user account shall be destroyed. The user will be navigated to the login screen and user name shall prefilled.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017990?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the Settings screen.</p>",
+        "expected": "<p> Expected 1: Settings screen is displayed with option for the user to Logout of the application.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select the Logout option.</p>",
+        "expected": "<p> Expected 2: User is logged out of the application and Login screen is displayed. Email/Username is reteined, Password is not retained.</p>"
+      }
+    ]
+  },
+  "GID-257433": {
+    "test_name": "Interpretation: Interpretation text character limit",
+    "test_description": "Verification of maximum character limit for interpretation text field.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017956?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the 'Pending Interpretation' screen through the Interpret bottom tab and select a patient report and then select the interpretation tab.</p>",
+        "expected": "<p> Expected 1: App displays option to enter free text are to interpretation.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Enter close to allowed characters in the interpretation text entry field.</p>",
+        "expected": "<p> Expected 2: Approaching text entry limit error is displayed as user reaches close to the character limit.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter more than allowed characters in the interpretation field.</p>",
+        "expected": "<p> Expected 3: An appropriate error message is displayed indicating that text entry limit is exceeded and the Accept and Sign button is disabled.</p>"
+      }
+    ]
+  },
+  "GID-257437": {
+    "test_name": "Interpretation: Disable accept and sign if text is over limit",
+    "test_description": "Verification of disabling of Accept & Sign button in the Interpretation screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017960?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the Interpret bottom tab\n\nTap on any of the pending interpretation report item</p>",
+        "expected": "<p> Expected 1: The view report page is displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on the Interpretations tab</p>",
+        "expected": "<p> Expected 2: The text area where we can note the interpretations gets displayed. Additionally the Call to action buttons like 'Agree with Findings' is also displayed.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter the text which exceeds the character limit.</p>",
+        "expected": "<p> Expected 3: 'Accept and sign' button is disabled automatically.</p>"
+      }
+    ]
+  },
+  "GID-623945": {
+    "test_name": "My Interpretation History: Filters: Newest first/Oldest first ",
+    "test_description": "THERE IS NO DESCRIPTION IN JAMA",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/2134564?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to ZioSuite mobile app as initial interpreter and navigate to \"My interpretation History\" List , Apply the \"Newest First\" filter.</p>",
+        "expected": "<p> Expected 1: Reports are listed with the most recent initial interpretation date at the top and the least recent at the bottom.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Navigate back to \"My interpretation History\" List and apply \"Oldest First\" filter.</p>",
+        "expected": "<p> Expected 2: Reports are listed with the least recent initial interpretation date at the top and the most recent at the bottom.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Login to ZioSuite mobile app as non-initial interpreter and navigate to \"My interpretation History\" List , Apply the \"Newest First\" filter.</p>",
+        "expected": "<p> Expected 3: Reports are listed with the most recent final interpretation date at the top and the least recent at the bottom</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Navigate back to \"My interpretation History\" List and apply \"Oldest First\" filter.</p>",
+        "expected": "<p> Expected 4: Reports are listed with the least recent final interpretation date at the top and the most recent at the bottom.</p>"
+      }
+    ]
+  },
+  "GID-257440": {
+    "test_name": "Patient List Sorting Order",
+    "test_description": "Verification of Patient list sorting order.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017963?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and login with a valid clinical user credential. Navigate to Patients bottom tab</p>",
+        "expected": "<p> Expected 1: Patient registrations within the locations associated with the user are displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Check the order of patient list displayed.</p>",
+        "expected": "<p> Expected 2: The Patient list is displayed by the patient name alphabetically</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Find two patients that have the same name.</p>",
+        "expected": "<p> Expected 3: Verify that the patients are then ordered by their prescription newest to oldest.</p>"
+      }
+    ]
+  },
+  "GID-257389": {
+    "test_name": "Posted Final Reports List: CTA for search",
+    "test_description": "Verification of an option to navigate to Patient search screen in the Posted Final Reports List screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017912?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and login as a valid existing clinical care user where they land on the main screen. Navigate to the Posted Final Reports List screen through the Reports bottom tab.</p>",
+        "expected": "<p> Expected 1: Navigate to the Posted Final Reports List screen through the Reports bottom tab.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select the Search icon</p>",
+        "expected": "<p> Expected 2: User navigates to Patient search screen.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter a search in the search screen and proceed.</p>",
+        "expected": "<p> Expected 3: Search result for the entered search is displayed.</p>"
+      }
+    ]
+  },
+  "GID-257425": {
+    "test_name": "Viewing Reports: Criteria for not allowing interpretation",
+    "test_description": "Verification of the criteria for an intepreter user to not have access to interpret a report.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017948?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to View report screen for a report for which logged in user is not an interpreter.</p>",
+        "expected": "<p> Expected 1: The View reports screen is displayed with the report and without Interpretation tab.</p>"
+      }
+    ]
+  },
+  "GID-257424": {
+    "test_name": "Viewing Reports: Criteria for allowing interpretation",
+    "test_description": "Verification of the criteria where interpreter user has the access to interpret a report.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017947?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app as a Clinical user with Interpreter role and navigate to View report screen for a patient for whom the logged in user is an interpreter.</p>",
+        "expected": "<p> Expected 1: The View reports screen is displayed in the Report tab and Interpretation tab.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on the Interpretation Tab.</p>",
+        "expected": "<p> Expected 2: The Interpretation tab is displayed with interpretation text area.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Navigate to Posted Reports screen and select a report which the logged in user has already interpreted.</p>",
+        "expected": "<p> Expected 3: The View reports screen is displayed in the Report tab and Interpretation tab.</p>"
+      }
+    ]
+  },
+  "GID-257377": {
+    "test_name": "Navigation : Main Menu Navigation items",
+    "test_description": "The ZioMD mobile app main navigation menu",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017900?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and log in as a clinical user with interpreter role .\n\nTap on the \"Interpret\" Menu present on the navigation.</p>",
+        "expected": "<p> Expected 1: User is navigated to the Pending Interpretation List.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on the \"Reports\" menu present on the navigation.</p>",
+        "expected": "<p> Expected 2: User is navigated to the Posted Final Report List.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Tap on the \"Transmissions\" menu present on the navigation.</p>",
+        "expected": "<p> Expected 3: User is navigated to the Transmission Reports List. </p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Tap on the \"Patients\" menu present on the navigation.</p>",
+        "expected": "<p> Expected 4: User is navigated to the patient List screen.</p>"
+      },
+      {
+        "name": 5,
+        "action": "<p> Action 5: Tap on the \"Settings\" menu present on the navigation.</p>",
+        "expected": "<p> Expected 5: User is navigated to the Settings screen.</p>"
+      }
+    ]
+  },
+  "GID-257376": {
+    "test_name": "Navigation: Main Navigation Menu Display",
+    "test_description": "The ZioMD mobile app shall have a main navigation menu that shall provide the means to navigate to each section of the app and shall be accessible when viewing any root screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017899?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to the app as a clinical user with interpreter role.</p>",
+        "expected": "<p> Expected 1: The user is logged in and the main navigation menu is displayed at the bottom.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select a menu item present on the main navigation.</p>",
+        "expected": "<p> Expected 2: The user is taken to that screen and the main menu is still displayed</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Repeat the above step for all the menu items</p>",
+        "expected": "<p> Expected 3: The main menu is displayed when navigating to each page</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Navigate to branch screens from each of the menu items.</p>",
+        "expected": "<p> Expected 4: Menu bar is not displayed in the branch screens.</p>"
+      }
+    ]
+  },
+  "GID-257378": {
+    "test_name": "Navigation :Main Menu Navigation Interpreter Tab displaying",
+    "test_description": "Verification of Interpret menu -Negative Test cases.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017901?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to the app as a user with interpreter role but does not have access to interpreting location. </p>",
+        "expected": "<p> Expected 1: Interpret bottom bar menu is displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Login to app as prescriber having access to only interpreting location.</p>",
+        "expected": "<p> Expected 2: Interpret bottom bar menu is not displayed.</p>"
+      }
+    ]
+  },
+  "GID-257415": {
+    "test_name": "Patient Search: Search fields",
+    "test_description": "Verification of Patient search results using search term in the Patient Search screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017938?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Select the 'Patient' menu from the bottom menu bar and select the Search icon.</p>",
+        "expected": "<p> Expected 1: Search screen is displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Enter a matching first name to a patient in the search field and select the search icon.</p>",
+        "expected": "<p> Expected 2: List of Patients matching the 'first name' entered is displayed.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter a matching last name to a patient in the search field and select the search icon.</p>",
+        "expected": "<p> Expected 3: List of Patients matching the 'last name' entered is displayed.</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Enter a matching first name and last name to a patient in the search field and select the search icon.</p>",
+        "expected": "<p> Expected 4: List of Patients matching the 'first name last name'  entered is displayed.</p>"
+      },
+      {
+        "name": 5,
+        "action": "<p> Action 5: Enter Patient ID on the search field and select the search icon.</p>",
+        "expected": "<p> Expected 5: List of Patients matching the 'Patient ID' entered is displayed.</p>"
+      },
+      {
+        "name": 6,
+        "action": "<p> Action 6: Enter a Serial Number on the search field and select the search icon.</p>",
+        "expected": "<p> Expected 6: List of SN that match the SN are displayed.</p>"
+      }
+    ]
+  },
+  "GID-365329": {
+    "test_name": "My Interpretation History: Labels",
+    "test_description": "Verification of  color coded labels in defined order in My Interpretation History screen - Initial Interpreter/Final Interpreter.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1277122?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to the ZioSuite mobile app as initial interpreter with reports and navigate to My Interpretation History.</p>",
+        "expected": "<p> Expected 1: Reports interpreted by logged in user are displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select the \"MD Notified\" filter</p>",
+        "expected": "<p> Expected 2: The MD Notified reports will be color coded and displayed with label.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Uncheck the MD Notified filter and Check reports with Pending Interpretation/Final Report filter.</p>",
+        "expected": "<p> Expected 3: Pending Interp/Final Report. will be color coded and displayed with label.</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Uncheck reports with pending interpretation/Final Report filter and Check reports with Initial Interp/Amended/Amended-Interp/ Amended Demographic.</p>",
+        "expected": "<p> Expected 4: Initial Interp/Amended/Amended-Interp/ Amended Demographic reports will be displayed with label.</p>"
+      },
+      {
+        "name": 5,
+        "action": "<p> Action 5: Uncheck reports with Initial Interp/Amended/Amended-Interp/ Amended Demographic and check reports with \"Archived\".</p>",
+        "expected": "<p> Expected 5: Archived reports will be displayed with Achieved label.</p>"
+      },
+      {
+        "name": 6,
+        "action": "<p> Action 6: Logout the current user</p>",
+        "expected": "<p> Expected 6: Login screen is displayed </p>"
+      },
+      {
+        "name": 7,
+        "action": "<p> Action 7: Login to the ZioSuite mobile app as Final interpreter and navigate to My Interpretation History.</p>",
+        "expected": "<p> Expected 7: The following label filters will be displayed for final Interpreter\n\nMD Notified \nFinal Interp\nAmended/Amended-Interp/ Amended Demographics\nArchived</p>"
+      }
+    ]
+  },
+  "GID-257416": {
+    "test_name": "Patient search: CTA to clear text in search field",
+    "test_description": "Verification of option to clear text entered in search field in the Patient screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017939?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the ‘Patient’ screen through the patients bottom tab then enter a valid search in the search field.</p>",
+        "expected": "<p> Expected 1: search results are displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select the clear text option in the search field.</p>",
+        "expected": "<p> Expected 2: Search results in the search field are cleared.</p>"
+      }
+    ]
+  },
+  "GID-257417": {
+    "test_name": "Patient Search: No search matches display",
+    "test_description": "Verification of display of ‘No Results’ screen in Patient screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017940?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to Patient screen through the Patients bottom tab, type an invalid data on the patient search page.</p>",
+        "expected": "<p> Expected 1: ZioSuite mobile app displays \"No Results Found\" screen.</p>"
+      }
+    ]
+  },
+  "GID-257418": {
+    "test_name": "Patient Search: Display last 5 searches below search field",
+    "test_description": "Verification of display of last 5 search strings below the Patient search field.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017941?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to ZioSuite application and navigate to the Patients screen through the bottom Patients tab.</p>",
+        "expected": "<p> Expected 1: The Patient screen is displayed with the list of all the patient registrations within the locations associated with the user.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Enter valid values (first name / last name / patient ID or device serial number) in the search area and perform a search. Clear the search field afterward. Perform this step 6 times.</p>",
+        "expected": "<p> Expected 2: Recent search results are displayed below the search field.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Go to the patient detail page and return to the patient search page.</p>",
+        "expected": "<p> Expected 3: The 5 most recent search data are displayed as per the previously entered data.</p>"
+      }
+    ]
+  },
+  "GID-257419": {
+    "test_name": "Patient Search: Search result content",
+    "test_description": "Verification of display of Patient Name and Patient DOB for each Patient search result.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017942?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the 'Patient search' screen.</p>",
+        "expected": "<p> Expected 1: The Patient search result displays Patient Name in ‘Last Name, First Name’ format and Date of Birth in based off the format of MM/DD/YYYY or Month DD, YYYY (the month may be abbreviated)</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Navigate to patients detail page and note the DOB of that patient.</p>",
+        "expected": "<p> Expected 2: The DOB associated with the particular patient displayed based off of MM/DD/YYYY or Month DD, YYYY (the month may be abbreviated)</p>"
+      }
+    ]
+  },
+  "GID-257420": {
+    "test_name": "Patient Search: Tapping on a search result",
+    "test_description": "Verification of user navigation to the Patient Profile screen when tapping on a Patient search result.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017943?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to Patient search screen, search for a Patient using a valid search string.</p>",
+        "expected": "<p> Expected 1: Matching Patient search results are displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select any of the listed patients from search result.</p>",
+        "expected": "<p> Expected 2: The patient profile screen of the selected Patient is displayed.</p>"
+      }
+    ]
+  },
+  "GID-257430": {
+    "test_name": "Viewing Reports: Closing the actions menu",
+    "test_description": "Verification of close action of the Actions menu in the View report screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017953?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Install the ZSM app for the first time and login as a valid existing clinical care user. Navigate to the View Report screen.</p>",
+        "expected": "<p> Expected 1: Actions menu in the View Report screen is displayed in open state by default.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on any other part of the screen.</p>",
+        "expected": "<p> Expected 2: Actions menus moves to closed state.</p>"
+      }
+    ]
+  },
+  "GID-257438": {
+    "test_name": "Interpretation: Saving the interpretation text before accept and sign",
+    "test_description": "Verification of save option before 'Accept and sign'. (AT, Zio, XT and MCT)",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017961?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite Mobile app and login as a valid existing clinical care user with reports with pending interpretation</p>",
+        "expected": "<p> Expected 1: User is successfully logged into the app and is able to see the main screen for the final posted reports screen</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Navigate to interpretation screen for a report, enter a draft interpretation and navigate to any other screens.</p>",
+        "expected": "<p> Expected 2: Entered interpretation is saved as draft interpretation in the app.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Navigate back to the interpretation screen of the same report.</p>",
+        "expected": "<p> Expected 3: Entered interpretation is displayed as draft.</p>"
+      },
+      {
+        "name": 4,
+        "action": "<p> Action 4: Edit the initial interpretation data with some values and navigate to other screens.</p>",
+        "expected": "<p> Expected 4: The edited data is saved as draft interpretation. </p>"
+      },
+      {
+        "name": 5,
+        "action": "<p> Action 5: Submit interpretation for the same report as different user from another device/channel. Navigate to pending intepretation screen.</p>",
+        "expected": "<p> Expected 5: The user will be notified, and the draft text will be replaced by the interpretation loaded from the web service.  </p>"
+      }
+    ]
+  },
+  "GID-257422": {
+    "test_name": "Viewing Reports: CTA for navigating to patient profile screen",
+    "test_description": "Verification of option for user to navigate from View Reports screen to Patient Profile screen.\n\nWithin the View Report screen, the ZioMD mobile app shall have a CTA to navigate to the patient profile associated with the report, if the user has permissions, as indicated by the ZioSuite web service, to view the patient details.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017945?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: On the reports tab click on a report associated with a patient that the user has permissions to view. </p>",
+        "expected": "<p> Expected 1: User can view the report.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on the Patient Name initials at the top right of the screen.</p>",
+        "expected": "<p> Expected 2: The user is navigated to the Patient Profile screen of the selected Patient initials and able to view patient details..</p>"
+      }
+    ]
+  },
+  "GID-257432": {
+    "test_name": "Interpretation: CTA to edit interpretation",
+    "test_description": "Verification of the Edit Interpretation option in the Interpretation tab in View report screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017955?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the 'Posted final reports' screen and Tap on a report which has been interpreted in the past. Tap on the \"Amend  Interpretation\"  button present at the bottom of the screen.</p>",
+        "expected": "<p> Expected 1: Interpretation text is now editable and Cancel and save options are available.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Edit the interpretation and Click on Save</p>",
+        "expected": "<p> Expected 2: The edited data is saved to the patient record. </p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Select on the cancel button and click on discard option</p>",
+        "expected": "<p> Expected 3: Edits made are not saved to the interpretation and user is navigated back to the Report Tab.</p>"
+      }
+    ]
+  },
+  "GID-257427": {
+    "test_name": "Viewing Reports: CTA to open actions menu",
+    "test_description": "Verification of the Actions menu in the View Report screen",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017950?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Click on a report to view and tap on the + CTA present at the bottom right of the report area</p>",
+        "expected": "<p> Expected 1: The user is presented with an actions overlay menu within the screen, with the options of Call, Print and Close.</p>"
+      }
+    ]
+  },
+  "GID-365087": {
+    "test_name": "Posted Final Reports List: Filters",
+    "test_description": "Verification of filters Under Final Report Posted",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1276483?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and login as a valid existing clinical care user with posted final reports and navigate to the Posted Final Reports section through the Reports bottom tab</p>",
+        "expected": "<p> Expected 1: The following filter types are available on the screen:\n\n1)MD Notification\n\n2)Prescribers\n\n3)Interpreters\n\n4)All Reports\n\n5)Filter with sorting(Newest First/Oldest First)</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Open the ZioSuite mobile app and login as a valid existing clinical care user that has multiple locations with posted final reports and navigate to the Posted Final Reports section through the Reports bottom tab</p>",
+        "expected": "<p> Expected 2: 1)MD Notification\n\n2)Prescribers\n\n3)Interpreters\n\n4)All Reports(Only for Prescriber User type)\n\n5) Filter with location\n\n7)Filter with sorting(Newest First/Oldest First)</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Open the ZioSuite mobile app and login as a valid existing user that is not a prescriber with posted final reports and navigate to the Posted Final Reports section through the Reports bottom tab</p>",
+        "expected": "<p> Expected 3: Verify that the All Reports filter type is not shown.</p>"
+      }
+    ]
+  },
+  "GID-365100": {
+    "test_name": "Pending Interpretation List: Filters ",
+    "test_description": "Verification of the functionality of the Filters which present on the pending interpretations tab.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1276534?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and login as a valid existing clinical care user with pending interpretation reports. Navigate to the Pending interpretation screen through the bottom \"Interpret\" tab.</p>",
+        "expected": "<p> Expected 1: User is successfully logged into the app and is able to see the Interpret tab is displayed with the following filters:\n\n1. MD notified\n\n2. Prescribers\n\n3. Interpreters\n\n4. Initial Interp\n\n5. Filter for Report Assignment\n\n6. Filter with Location\n\n7. Filter with Sorting</p>"
+      }
+    ]
+  },
+  "GID-257381": {
+    "test_name": "Posted Final Reports List Default Sort Order",
+    "test_description": "On the Posted Final Report List screen, by default, all non-archived or replaced final reports associated with an account in reverse chronological order. All Device Types.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017904?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the Posted Final Reports list screen for a user with archived and replaced reports.</p>",
+        "expected": "<p> Expected 1: All non-archived or replaced final reports as displayed in reverse chronological order.</p>"
+      }
+    ]
+  },
+  "GID-257396": {
+    "test_name": "Pending Interpretation List: Fields displayed",
+    "test_description": "Verification of fields for each report in the Pending Interpretation Reports List.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017919?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and login as a valid existing clinical care user with pending interpretation reports and navigate to the Pending Interpretation Reports List screen through the Interpret bottom tab.</p>",
+        "expected": "<p> Expected 1: For each report the fields listed below are displayed: \n1. Patient Name\n2. The report posted date/time is displayed \n3. The product type and report type\n4. Labels applicable for reports\n5. The prescriber( Last name, First name)\n6. The assigned interpreter (if there has been one assigned)</p>"
+      }
+    ]
+  },
+  "GID-365067": {
+    "test_name": "My Interpretation History Filters",
+    "test_description": "Verification of Filters in My Interpretation History",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1276331?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app</p>",
+        "expected": "<p> Expected 1: Login screen is displayed correctly</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Login with using a user with interpreter role and already interpreted reports and navigate to My Interpretation History screen.</p>",
+        "expected": "<p> Expected 2: The following filters are displayed under My Interpretation History.\n\n- MD Notified\n\n- Prescriber\n\n- Filter with location \n\n- Final Interp on/off filter (for initial interpreters only)\n\n- Newest first/oldest first filter</p>"
+      }
+    ]
+  },
+  "GID-365070": {
+    "test_name": "My Interpretation History: Navigation ",
+    "test_description": "Test to verify the user can navigate to the Report screen from the 'My Interpretation History' section",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1276361?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Log in to app and navigate to the interpretation history list.</p>",
+        "expected": "<p> Expected 1: A list of already interpreted reports is displayed</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on any report item in the list.</p>",
+        "expected": "<p> Expected 2: User is taken to the report screen and can view the Report.</p>"
+      }
+    ]
+  },
+  "GID-257401": {
+    "test_name": "My Interpretation History: Interpretation history list display ",
+    "test_description": "The ZioMD mobile app shall provide the ability to view/ Edit the past interpreted reports in descending or ascending order of Interpretation date, if user still has interpretation or initial-Interpretation privilege.\n\nThe Report list display shall display total count of reports in header section.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017924?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to the ZioSuite Mobile app with interpreter user with past interpretations and navigate to the Interpret bottom tab.</p>",
+        "expected": "<p> Expected 1: The logged in user is able to view/edit reports he has Final or Initial Interpretation privilege.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Navigate to 'My Interpretation History'</p>",
+        "expected": "<p> Expected 2: My Interpretation History screen displays all the reports the logged in user interpreted in the past within or outside the associated account in descending order of Interpretation date.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Check for the count of reports in header section.</p>",
+        "expected": "<p> Expected 3: The Report list display shall display total count of reports in header section.</p>"
+      }
+    ]
+  },
+  "GID-257441": {
+    "test_name": "Patients List: CTA patient search",
+    "test_description": "Verification of patient search CTA button present at the the top right of the screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017964?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the Patients bottom tab and Select the Search icon.</p>",
+        "expected": "<p> Expected 1: Search screen is displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Enter a valid patient name, then tap on search.</p>",
+        "expected": "<p> Expected 2: The patient page displays the result in the order of registration date descending from the current date.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Enter an invalid patient name then tap on search.</p>",
+        "expected": "<p> Expected 3: An appropriate error message is displayed.</p>"
+      }
+    ]
+  },
+  "GID-257442": {
+    "test_name": "Patients List: List content ",
+    "test_description": "Verification of the Patient listing format.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017965?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Open the ZioSuite mobile app and login with valid existing clinical care user. Navigate to Patients bottom tab</p>",
+        "expected": "<p> Expected 1: The patient's list screen is displayed using the following format\n\n1. Patient last name, patient first name\n2. Birth Date formatted based on MM/DD/YYYY or Month DD, YYYY (the month may be abbreviated)</p>"
+      }
+    ]
+  },
+  "GID-257423": {
+    "test_name": "Viewing Reports: Display patient name",
+    "test_description": "Verification of the Patient Name on View Reports screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017946?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Choose a report from the list and navigate to the View Report screen</p>",
+        "expected": "<p> Expected 1: The View Report screen is displayed with patient name 'Last Name, First Name' format matching with the patient Name at the center of the header.</p>"
+      }
+    ]
+  },
+  "GID-257434": {
+    "test_name": "Interpretation screen: CTA to agree with findings ",
+    "test_description": "Verification of the option to insert 'Agree with Findings' text into the interpretation text field. (AT, Zio, XT and MCT)",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017957?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to the 'Pending Interpretation' through the Interpret bottom tab and select a patient report.</p>",
+        "expected": "<p> Expected 1: View Report screen is displayed.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Tap on the 'Interpretations' tab.</p>",
+        "expected": "<p> Expected 2: CTA to agree with preliminary findings of the report will display.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Tap on 'Agree with Findings'.</p>",
+        "expected": "<p> Expected 3: Text 'Agree with Findings' is appended to any text in the text area.</p>"
+      }
+    ]
+  },
+  "_GID-257379": {
+    "test_name": "My Interpretation History: Interpretation history list display ",
+    "test_description": "The ZioMD mobile app shall provide the ability to view/ Edit the past interpreted reports in descending or ascending order of Interpretation date, if user still has interpretation or initial-Interpretation privilege.\n\nThe Report list display shall display total count of reports in header section.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017924?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Login to the ZioSuite Mobile app with interpreter user with past interpretations and navigate to the Interpret bottom tab.</p>",
+        "expected": "<p> Expected 1: The logged in user is able to view/edit reports he has Final or Initial Interpretation privilege.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Navigate to 'My Interpretation History'</p>",
+        "expected": "<p> Expected 2: My Interpretation History screen displays all the reports the logged in user interpreted in the past within or outside the associated account in descending order of Interpretation date.</p>"
+      },
+      {
+        "name": 3,
+        "action": "<p> Action 3: Check for the count of reports in header section.</p>",
+        "expected": "<p> Expected 3: The Report list display shall display total count of reports in header section.</p>"
+      }
+    ]
+  },
+  "_GID-257449": {
+    "test_name": "Main Menu Navigation To Monitor Screen",
+    "test_description": "Verification of Navigation from Patient Profile Screen to Monitoring period screen.",
+    "jama_url": "https://irhythmtech.jamacloud.com/perspective.req#/testCases/1017972?projectId=98",
+    "test_steps": [
+      {
+        "name": 1,
+        "action": "<p> Action 1: Navigate to Patient profile screen for a patient with minimum one device enrollment.</p>",
+        "expected": "<p> Expected 1: Patient profile screen is displayed with the list of Device enrolled.</p>"
+      },
+      {
+        "name": 2,
+        "action": "<p> Action 2: Select a device from the device list.</p>",
+        "expected": "<p> Expected 2: Monitoring Period screen of the selected device is displayed.</p>"
+      }
+    ]
+  }
+}
