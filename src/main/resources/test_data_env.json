@@ -1,0 +1,11 @@
+{
+  "TESTCASE_ID_FROM_ANNOTATION": {
+    "KEY": "VALUE",
+    "KEY2": "VALUE2",
+    "KEY3": "VALUE3"
+  },
+  "GID-257326": {
+    "invalid_email1": "john..doe@example.com",
+    "invalid_email2": "john.doe@example..com"
+  }
+}

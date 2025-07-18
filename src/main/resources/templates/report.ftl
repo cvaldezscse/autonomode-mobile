@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>${markupTitle}</title>
-    <style type="text/css">
+<head>
+<title>${markupTitle}</title>
+<style type="text/css">
         table
         {
-          table-layout:fixed;
-          width:100%;
-          word-break: break-word;
+            table-layout:fixed;
+            width:100%;
+            word-break: break-word;
         }
     </style>
   </head>
