@@ -22,6 +22,7 @@
         <snakeyaml.version>2.4</snakeyaml.version>
         <jackson.version>2.18.1</jackson.version>
         <logback.version>1.4.14</logback.version>
+        <lombok.version>1.18.30</lombok.version>
         <maven.surefire.version>3.5.2</maven.surefire.version>
     </properties>
 
@@ -53,6 +54,20 @@
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>${snakeyaml.version}</version>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <!--  Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
 
