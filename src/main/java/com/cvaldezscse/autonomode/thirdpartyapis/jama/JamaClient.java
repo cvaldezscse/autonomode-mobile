@@ -1,7 +1,12 @@
 package com.cvaldezscse.autonomode.thirdpartyapis.jama;
 
 import com.cvaldezscse.autonomode.annotations.JamaTest;
+import com.cvaldezscse.autonomode.config.JamaConfiguration;
 import com.cvaldezscse.autonomode.reporting.model.TestCase;
+import com.cvaldezscse.autonomode.reporting.model.TestStep;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
 
 public class JamaClient {
     protected JamaConfiguration jamaConfig = new JamaConfiguration(jamaConfiguration);

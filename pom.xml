@@ -24,6 +24,7 @@
         <logback.version>1.4.14</logback.version>
         <lombok.version>1.18.30</lombok.version>
         <maven.surefire.version>3.5.2</maven.surefire.version>
+        <hamcrest.version>2.2</hamcrest.version>
     </properties>
 
     <dependencies>
@@ -49,7 +50,7 @@
             <version>${freemarker.version}</version>
         </dependency>
 
-        <!-- YAML Wrappers -->
+        <!-- Snakeyaml -->
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
@@ -70,6 +71,19 @@
             <version>${jackson.version}</version>
         </dependency>
 
+        <!--  Hamcrest for matching assertions -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>${hamcrest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-library</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <!-- Logback for custom logging -->
         <dependency>
@@ -77,7 +91,6 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-
 
     </dependencies>
 
@@ -135,7 +148,6 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
                 </plugin>
-                <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
                 <plugin>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.7.1</version>

@@ -2,7 +2,7 @@ package com.cvaldezscse.autonomode.drivers;
 
 import io.appium.java_client.AppiumDriver;
 
-import static com.cvaldezscse.autonomode.constants.ConstantFunctions.PLATFORM;
+import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.PLATFORM;
 
 public class Driver {
     public static AppiumDriver getAppiumDriver() {

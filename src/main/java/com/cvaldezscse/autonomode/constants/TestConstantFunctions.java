@@ -1,8 +1,11 @@
 package com.cvaldezscse.autonomode.constants;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import static com.cvaldezscse.autonomode.constants.TestConstants.BASE_CONFIG;
 
-public class ConstantFunctions {
+public class TestConstantFunctions {
     public static String getConfigurationPath() {
         String fileName = CONFIGURATION_YAML_FILE_NAME + ".yaml";
         String path = ResourceLoader.getResourcePath(fileName);
@@ -41,6 +44,14 @@ public class ConstantFunctions {
                 return Enums.PlatformType.Android;
             default:
                 return Enums.PlatformType.Unknown;
+        }
+    }
+
+    public static URL getAppiumServerUrl() throws MalformedURLException {
+        if (IS_DEVICEFARM_RUN) {
+            return new URL(DEVICE_FARM_APPIUM_URL);
+        } else {
+            return new URL(DEFAULT_LOCAL_APPIUM_URL);
         }
     }
 }

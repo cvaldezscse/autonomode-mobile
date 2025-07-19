@@ -2,7 +2,7 @@ package com.cvaldezscse.autonomode.constants;
 
 import com.cvaldezscse.autonomode.config.Configuration;
 
-import static com.cvaldezscse.autonomode.constants.ConstantFunctions.getConfigurationPath;
+import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.getConfigurationPath;
 
 public class TestConstants {
 

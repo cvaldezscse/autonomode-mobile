@@ -1,11 +1,26 @@
 package com.cvaldezscse.autonomode.reporting;
 
 
+import com.cvaldezscse.autonomode.annotations.AnnotationHelper;
+import com.cvaldezscse.autonomode.annotations.JamaTest;
+import com.cvaldezscse.autonomode.annotations.JamaTestStep;
+import com.cvaldezscse.autonomode.annotations.JsonTest;
+import com.cvaldezscse.autonomode.annotations.JsonTestStep;
+import com.cvaldezscse.autonomode.annotations.TestSource;
+import com.cvaldezscse.autonomode.annotations.TestSourceStep;
 import com.cvaldezscse.autonomode.reporting.listeners.ReportingListener;
+import com.cvaldezscse.autonomode.reporting.model.Assertion;
+import com.cvaldezscse.autonomode.reporting.model.Screenshot;
 import com.cvaldezscse.autonomode.reporting.model.TestCase;
 import com.cvaldezscse.autonomode.reporting.model.TestExecution;
 import com.cvaldezscse.autonomode.reporting.model.TestStep;
+import org.hamcrest.Description;
+import org.hamcrest.Matcher;
+import org.hamcrest.StringDescription;
 import org.testng.annotations.Listeners;
+
+import static com.cvaldezscse.autonomode.reporting.listeners.ReportingListener.testPlan;
+import static java.lang.String.format;
 
 @Listeners(ReportingListener.class)
 public abstract class ReportingTestBase {

@@ -28,4 +28,8 @@ Automated mobile testing framework using **Java**, **Appium** and **TestNG**.
 ```bash
 git clone https://github.com/your-username/autonomode-mobile.git
 cd autonomode-mobile
-mvn clean install
+mv clean install
+```
+
+## Configuration
+This framework is made for being extensible in terms of testing a mobile app. Configuration is required to be updated, see detailed configuration options [Configuration Reference](docs/CONFIGURATION.md).

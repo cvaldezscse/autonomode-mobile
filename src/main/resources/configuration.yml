@@ -1,0 +1,71 @@
+# -------
+# General Configs
+# -------
+executionPlatform: "android"
+executionType: "local"
+environment: "prod"
+areRetriesAllowed: False
+
+
+
+# -------
+# Test Report Config
+# -------
+htmlReportFileName: "TEST_AUTOMATION_REPORT"
+showFailedTestsFirst: true
+projectRepositoryUrl: "https://github.com/cvaldezscse/autonomode-mobile.git"
+usedTemplate: "report.ftl"
+logoImage: "irhythm.png"
+reportMarkupTitle: ""
+
+
+# -------
+# Android Local capabilities
+# -------
+androidDeviceName: "moto g 5G - 2024"
+androidPlatformVersion: "14"
+androidAppFileName: "ZioMd-1.4.0-901-MCT-rc.apk"
+androidAppVersion: "1.4.0"
+androidAppBuild: "901"
+androidBundleId: "com.google.maps"
+
+
+# -------
+# iOS Local capabilities
+# -------
+iosDeviceName: "iPhone 11 iRhythm"
+iosPlatformVersion: "18.3.1"
+iosDeviceUDID: "00008030-0005694A14E8802E"
+xcodeOrgId: "55CL7NXWST"
+xcodeSigningId: "Apple Development"
+iosAppFileName: "ziomd-mct_saucelabs-v1-4-0-build-12.ipa"
+iosBundleId: "com.irhythm.ZioMD.mct"
+iosAppVersion: "1.4.0"
+iosAppBuild: "12"
+#defaultFontSetting: "UICTContentSizeCategoryAccessibilityL"
+
+
+# -------
+# AppiumServer Local Config
+# -------
+localServerDynamicallyStarted: false
+appiumServerPort: 3393
+appiumServerUrl: "http://127.0.0.1:%d"
+appiumServerCustomPath: "/.appium/"
+
+
+
+# -------
+# Jama config (To Be removed)
+# -------
+jamaConfiguration:
+  jamaEnabled: 'true'
+  testGroup: "5480"
+  testCycle: "2152591"
+  testRun: "2152592"
+  jamaProject: "98"
+  runRegression: 'false'
+  updateTestRunStatus: 'true'
+  filterByTags: 'false'
+  assignedTo: 187
+  tags: ""

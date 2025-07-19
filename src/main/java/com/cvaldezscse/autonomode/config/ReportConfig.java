@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public static class ReportConfig {
+public class ReportConfig {
     private boolean showFailedTestsFirst = false;
 }

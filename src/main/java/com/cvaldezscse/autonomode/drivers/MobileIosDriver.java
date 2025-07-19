@@ -1,9 +1,18 @@
 package com.cvaldezscse.autonomode.drivers;
 
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
+import io.appium.java_client.ios.options.wda.ProcessArguments;
+import io.appium.java_client.remote.AutomationName;
+import org.openqa.selenium.remote.http.HttpMethod;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
+import java.util.Arrays;
+
+import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.PLATFORM;
+import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.getAppiumServerUrl;
 
 public class MobileIosDriver {
     private static final int MAX_SESSION_ATTEMPTS = 3;
@@ -162,13 +171,5 @@ public class MobileIosDriver {
         }
 
         return driver;
-    }
-
-    private static URL getAppiumServerUrl() throws MalformedURLException {
-        if (IS_DEVICEFARM_RUN)
-            return new URL(DEVICE_FARM_APPIUM_URL);
-        else
-            return new URL(DEFAULT_LOCAL_APPIUM_URL);
-
     }
 }

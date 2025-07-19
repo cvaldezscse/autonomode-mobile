@@ -1,57 +1,64 @@
 package com.cvaldezscse.autonomode.config;
 
 
+import com.cvaldezscse.autonomode.utils.ResourceLoader;
 import lombok.Getter;
 import lombok.Setter;
 import org.yaml.snakeyaml.Yaml;
-
 import java.io.IOException;
 import java.io.InputStream;
 
 @Getter
 @Setter
 public class Configuration {
-
+    //General Configs
     private String executionPlatform;
-    private String htmlReportFileName;
     private String executionType;
     private String environment;
+    private String areRetriesAllowed;
+
+
+    //Test Report Config
+    private String htmlReportFileName;
+    boolean showFailedTestsFirst = false;
+    private String projectRepositoryUrl;
+    private String usedTemplate;
+    private String logoImage;
     private String reportMarkupTitle;
-    private String retries;
+
+
+    //Android Local capabilities
     private String androidDeviceName;
     private String androidPlatformVersion;
     private String androidAppFileName;
-    private String androidBundleId;
-    private boolean localServerDynamicallyExecuted;
-    private String appiumServerUrl;
-    private String iosAppVersion;
-    private String iosAppBuild;
-    private String iosDeviceName;
-    private String iosAppFileName;
-    private String iosDeviceUID;
-    private String iosPlatformVersion;
-    private String iosBundleId;
-    private String xcodeOrgId;
-    private String xcodeSigningId;
     private String androidAppVersion;
     private String androidAppBuild;
-    private String defaultFontSetting;
-    private String buildKey;
-    private String bambooBuildId;
-    private JamaConfiguration jamaConfiguration;
-    private String myZioUsqa1Host;
-    private String myZioUkqa1Host;
-    private String projectRepositoryUrl;
-    private String appiumCustomPath;
-    private int localDbPort;
-    private boolean deviceFarmRun = false;
-    private ReportConfig reportConfig = new ReportConfig();
+    private String androidBundleId;
+
+
+    //iOS Local capabilities
+    private String iosDeviceName;
+    private String iosPlatformVersion;
+    private String iosDeviceUDID;
+    private String xcodeOrgId;
+    private String xcodeSigningId;
+    private String iosAppFileName;
+    private String iosBundleId;
+    private String iosAppVersion;
+    private String iosAppBuild;
+
+
+    //Appium Server Local Config
+    private boolean localServerDynamicallyStarted;
+    private int appiumServerPort;
+    private String appiumServerUrl;
+    private String appiumServerCustomPath;
+
 
 
     public static Configuration getConfiguration(String configFileLocation) {
         Configuration config = null;
         Yaml yaml = new Yaml();
-        // Extract just the filename if a full path is provided
         String fileName = configFileLocation;
         if (fileName.contains("/"))
             fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
@@ -69,7 +76,6 @@ public class Configuration {
             in.close();
         } catch (IOException e) {
             e.printStackTrace();
-            // Initialize with defaults to avoid NPE
             config = new Configuration();
         }
         return config;
