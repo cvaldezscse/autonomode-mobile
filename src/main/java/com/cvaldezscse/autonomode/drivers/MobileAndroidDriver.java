@@ -2,17 +2,19 @@ package com.cvaldezscse.autonomode.drivers;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
+import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
-
 import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.PLATFORM;
+import static com.cvaldezscse.autonomode.constants.TestConstants.*;
 import static io.appium.java_client.remote.AutomationName.ANDROID_UIAUTOMATOR2;
+import static java.time.Duration.ofMillis;
 
 public class MobileAndroidDriver {
     private static UiAutomator2Options setCapabilities() {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setAutomationName(ANDROID_UIAUTOMATOR2);
-        if (!IS_DEVICEFARM_RUN) {
+        if (!IS_DEVICEFARM_RUN && IS_LOCAL_RUN) {
             // Local execution specific capabilities
             options.setPlatformName(PLATFORM().name());
             options.setDeviceName(ANDROID_DEVICE_NAME);
@@ -30,7 +32,7 @@ public class MobileAndroidDriver {
             options.setAllowTestPackages(true);
             options.setUninstallOtherPackages("true");
         } else
-            logInfo("Using Device Farm, Most capabilities are managed from there", logger);
+            System.out.println("Using Device Farm, Most capabilities are managed from there");
         return options;
     }
 
@@ -40,16 +42,15 @@ public class MobileAndroidDriver {
 
         try {
             URL serverUrl = getAppiumServerUrl();
-            logInfo("Connecting to Appium at: " + serverUrl, logger);
+            System.out.println("Connecting to Appium at: " + serverUrl);
             driver = new AndroidDriver(serverUrl, capabilities);
-            logInfo("AndroidDriver initialized successfully", logger);
+            System.out.println("AndroidDriver initialized successfully");
             return driver;
         } catch (MalformedURLException e) {
-            logError("Invalid Appium server URL: " + e.getMessage(), logger);
+            System.out.println("Invalid Appium server URL: " + e.getMessage());
         } catch (Exception e) {
-            logError("Failed to initialize AndroidDriver: " + e.getMessage(), logger);
+            System.out.println("Failed to initialize AndroidDriver: " + e.getMessage());
         }
-
         return driver;
     }
 }

@@ -7,7 +7,6 @@ environment: "prod"
 areRetriesAllowed: False
 
 
-
 # -------
 # Test Report Config
 # -------

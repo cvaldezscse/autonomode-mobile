@@ -13,6 +13,8 @@ import java.util.Arrays;
 
 import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.PLATFORM;
 import static com.cvaldezscse.autonomode.constants.TestConstantFunctions.getAppiumServerUrl;
+import static com.cvaldezscse.autonomode.constants.TestConstants.*;
+import static java.time.Duration.ofMillis;
 
 public class MobileIosDriver {
     private static final int MAX_SESSION_ATTEMPTS = 3;
@@ -41,7 +43,7 @@ public class MobileIosDriver {
             options.setMaxTypingFrequency(10);
 
             // WDA settings
-            options.setWdaLaunchTimeout(Duration.ofMillis(500000));
+            options.setWdaLaunchTimeout(ofMillis(500000));
             options.setWaitForQuiescence(false);
             options.setSimpleIsVisibleCheck(true);
             options.setReduceMotion(true);
@@ -59,7 +61,7 @@ public class MobileIosDriver {
                 options.setProcessArguments(arguments);
             }
         } else
-            logInfo("Using Device Farm, Most capabilities are managed from there", logger);
+            System.out.println("Using Device Farm, Most capabilities are managed from there");
         return options;
     }
 
@@ -72,7 +74,7 @@ public class MobileIosDriver {
             options.setPlatformVersion(IOS_PLATFORM_VERSION);
             options.setAutomationName(AutomationName.IOS_XCUI_TEST);
             options.setWdaLaunchTimeout(ofMillis(500000));
-            options.setUdid(IOS_DEVICE_UID);
+            options.setUdid(IOS_DEVICE_UDID);
             options.setNoReset(true);
             options.setBundleId(IOS_BUNDLE_ID);
             options.setWaitForQuiescence(false);
@@ -149,7 +151,7 @@ public class MobileIosDriver {
 
         try {
             URL serverUrl = getAppiumServerUrl();
-            logInfo("Connecting to Appium at: " + serverUrl, logger);
+            System.out.println("Connecting to Appium at: " + serverUrl);
             driver = new IOSDriver(serverUrl, capabilities);
 
             // Configure vision command if required
@@ -159,15 +161,15 @@ public class MobileIosDriver {
                         String.format("/session/%s/appium/vision", driver.getSessionId()),
                         "getVisionText"
                 );
-                logInfo("Vision commands enabled", logger);
+                System.out.println("Vision commands enabled");
             }
 
-            logInfo("IOSDriver initialized successfully", logger);
+            System.out.println("IOSDriver initialized successfully");
             return driver;
         } catch (MalformedURLException e) {
-            logError("Invalid Appium server URL: " + e.getMessage(), logger);
+            System.out.println("Invalid Appium server URL: " + e.getMessage());
         } catch (Exception e) {
-            logError("Failed to initialize IOSDriver: " + e.getMessage(), logger);
+            System.out.println("Failed to initialize IOSDriver: " + e.getMessage());
         }
 
         return driver;

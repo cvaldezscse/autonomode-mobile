@@ -8,6 +8,7 @@ import com.cvaldezscse.autonomode.annotations.JsonTestStep;
 import com.cvaldezscse.autonomode.annotations.TestSource;
 import com.cvaldezscse.autonomode.annotations.TestSourceStep;
 import com.cvaldezscse.autonomode.config.Configuration;
+import com.cvaldezscse.autonomode.config.JamaConfiguration;
 import com.cvaldezscse.autonomode.reporting.ReportEngine;
 import com.cvaldezscse.autonomode.reporting.model.TestCase;
 import com.cvaldezscse.autonomode.reporting.model.TestExecution;
@@ -24,13 +25,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.cvaldezscse.autonomode.constants.TestConstants.BASE_CONFIG;
 import static java.lang.String.format;
 
 public class ReportingListener implements IClassListener, ITestListener, ISuiteListener {
     public static final TestPlan testPlan = new TestPlan();
     private long suiteStartTime;
-    private static Configuration configuration = BASE_CONFIG;
-    private static JamaConfiguration jamaConf = new JamaConfiguration(configuration.getJamaConfiguration());
+//    private static JamaConfiguration jamaConf = new JamaConfiguration(BASE_CONFIG.getJamaConfiguration());
     private final Map<String, Map<String, String>> testStepResults = new HashMap<>();
     private static int testCount = 0;
 

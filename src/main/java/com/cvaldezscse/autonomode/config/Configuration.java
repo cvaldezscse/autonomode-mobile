@@ -1,21 +1,24 @@
 package com.cvaldezscse.autonomode.config;
 
-
+import com.cvaldezscse.autonomode.constants.TestConstants;
 import com.cvaldezscse.autonomode.utils.ResourceLoader;
 import lombok.Getter;
 import lombok.Setter;
 import org.yaml.snakeyaml.Yaml;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Paths;
+import java.util.Optional;
 
 @Getter
 @Setter
 public class Configuration {
+
     //General Configs
     private String executionPlatform;
     private String executionType;
     private String environment;
-    private String areRetriesAllowed;
+    private boolean areRetriesAllowed;
 
 
     //Test Report Config
@@ -23,7 +26,7 @@ public class Configuration {
     boolean showFailedTestsFirst = false;
     private String projectRepositoryUrl;
     private String usedTemplate;
-    private String logoImage;
+    private String logoImageName;
     private String reportMarkupTitle;
 
 
@@ -57,28 +60,27 @@ public class Configuration {
 
 
     public static Configuration getConfiguration(String configFileLocation) {
-        Configuration config = null;
         Yaml yaml = new Yaml();
-        String fileName = configFileLocation;
-        if (fileName.contains("/"))
-            fileName = fileName.substring(fileName.lastIndexOf('/') + 1);
-        try {
-            InputStream in = ResourceLoader.getResourceAsStream(configFileLocation);
+        String fileName = Paths.get(configFileLocation).getFileName().toString();
+        try (InputStream in = Optional
+                .ofNullable(ResourceLoader.getResourceAsStream(configFileLocation))
+                .or(() -> Optional.ofNullable(ResourceLoader.getResourceAsStream(fileName)))
+                .orElse(null)) {
             if (in == null) {
-                in = ResourceLoader.getResourceAsStream(fileName);
-                logInfo("Trying to load configuration from: " + fileName, logger);
+                System.out.println("Configuration file not found: " + configFileLocation);
+                return new Configuration();
             }
-            if (in == null) {
-                logError("Unable to load configuration from: " + configFileLocation, logger);
-                throw new IOException("Unable to load configuration from: " + configFileLocation);
-            }
-            config = yaml.loadAs(in, Configuration.class);
-            in.close();
+            System.out.println("Loading configuration from: " + configFileLocation);
+            return yaml.loadAs(in, Configuration.class);
         } catch (IOException e) {
-            e.printStackTrace();
-            config = new Configuration();
+            System.out.println("Error loading configuration: " + e.getMessage());
+            return new Configuration();
         }
-        return config;
+    }
+
+
+    public static Configuration getConfiguration() {
+        return getConfiguration(TestConstants.DEFAULT_CONFIG_FILE_PATH);
     }
 
 
